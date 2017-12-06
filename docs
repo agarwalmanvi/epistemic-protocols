@@ -1,0 +1,6 @@
+Public Observation Logic -- docs
+
+Epistemic Expectation Models are a tuple M = <S,R,V,Exp>
+S -> nodeList
+R -> rel
+V -> 

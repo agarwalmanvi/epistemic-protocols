@@ -1,0 +1,100 @@
+@font-face {
+	font-family: robotoBlack;
+	src: url(Roboto-Black.ttf);
+}
+@font-face {
+	font-family: robotoBlackItalic;
+	src: url(Roboto-BlackItalic.ttf);
+}
+@font-face {
+	font-family: robotoBold;
+	src: url(Roboto-Bold.ttf);
+}
+@font-face {
+	font-family: robotoBoldItalic;
+	src: url(Roboto-BoldItalic.ttf);
+}
+@font-face {
+	font-family: robotoItalic;
+	src: url(Roboto-Italic.ttf);
+}
+@font-face {
+	font-family: robotoLight;
+	src: url(Roboto-Light.ttf);
+}
+@font-face {
+	font-family: robotoLightItalic;
+	src: url(Roboto-LightItalic.ttf);
+}
+@font-face {
+	font-family: robotoMedium;
+	src: url(Roboto-Medium.ttf);
+}
+@font-face {
+	font-family: robotoMediumItalic;
+	src: url(Roboto-MediumItalic.ttf);
+}
+@font-face {
+	font-family: robotoRegular;
+	src: url(Roboto-Regular.ttf);
+}
+@font-face {
+	font-family: robotoThin;
+	src: url(Roboto-Thin.ttf);
+}
+@font-face {
+	font-family: robotoThinItalic;
+	src: url(Roboto-ThinItalic.ttf);
+}
+#header {
+	padding-top:20px;
+	padding-bottom:10px;
+	text-align:center;
+	font-size: 34px;
+	font-family:robotoBlack;
+	color: rgba(255,255,255,0.8);
+	
+}
+#sidePane {
+	background-color: #7A1EA1;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.form-control {
+	font-family: robotoThinItalic
+}
+.formLabel {
+	font-family:robotoRegular;
+	font-size:20px;
+	color:rgba(255,255,255,0.8)
+}
+
+.modifyButton {
+	background-color: #68EFAD;
+	font-family:robotoRegular;
+	font-size:20px;
+	color:rgba(255,255,255,0.7);
+	width:215px;
+	height:48px;
+	box-shadow:5px 5px;
+}
+.btn-square {
+	border-radius:0;
+	border: 0 none
+}
+
+.performButton {
+	background-color: #68EFAD;
+	font-family:robotoRegular;
+	font-size:20px;
+	color:rgba(255,255,255,0.7);
+	width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.btn.active, .btn:active {
+	background:#cecece;
+	text-decoration:none;
+}
+
