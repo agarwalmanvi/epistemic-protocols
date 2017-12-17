@@ -1,0 +1,115 @@
+<!--TODO display images in sidePane when draw model button is clicked-->
+<!--TODO add snackbar at bottom to display successful generate-->
+<!--TODO make flowchart for button actions-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Material Design Lite</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Build a Model</span>
+				<nav class="mdl-navigation" id="sidePane">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="worldsNum">
+							<label class="mdl-textfield__label" for="worldsNum">How many Worlds?</label>
+							<span class="mdl-textfield__error">Input is not a number!</span>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="propsNum">
+							<label class="mdl-textfield__label" for="propsNum">How many Propositions?</label>
+							<span class="mdl-textfield__error">Input is not a number!</span>
+						</div>
+						<div>
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent performButton" onclick="createTable(); emptyModel()">
+							Generate!
+						</button>
+						</div>
+						<div>
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect dialog-button mdl-button--pop modifyButton">
+							Modify Valuations
+						</button>
+							<dialog id="dialog" class="mdl-dialog">
+							<div class="mdl-dialog__actions">
+								<button type="button" class="mdl-button fixedButton" onclick="saveValuation()">Save</button>
+								<button type="button" class="mdl-button closeButton" onclick="closeModal()">Close</button>
+							  </div>
+							  <div class="mdl-dialog__content" id="wrapper">
+							  	
+							  </div>
+							  
+							</dialog>
+						</div>
+						<div>
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect dialog-button1 mdl-button--pop modifyButton">
+							Modify Relations
+						</button>
+						
+							<dialog id="dialog1" class="mdl-dialog">
+							<div class="mdl-dialog__actions">
+								<button type="button" class="mdl-button fixedButton" onclick="saveValuation()">Save</button>
+								<button type="button" class="mdl-button closeButton" onclick="closeModal1()">Close</button>
+								<button type="button" class="mdl-button makeSymButton" onclick="makeSym()">Make Me Symmetric!</button>
+								<button type="button" class="mdl-button makeTranButton" onclick="makeTran()">Make Me Transitive!</button>
+							  </div>
+							  <div class="mdl-dialog__content" id="wrapper1">
+							  	
+							  </div>
+							  
+							</dialog>
+						
+						</div>
+						<div>
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect dialog-button2 mdl-button--pop modifyButton">
+							Modify Expectations
+						</button>
+						
+							<dialog id="dialog2" class="mdl-dialog">
+							<div class="mdl-dialog__actions">
+								<button type="button" class="mdl-button fixedButton">Save</button>
+								<button type="button" class="mdl-button closeButton" onclick="closeModal2()">Close</button>
+							  </div>
+							  <div class="mdl-dialog__content" id="wrapper2">
+							  	
+							  </div>
+							  
+							</dialog>
+						
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-top:30px">
+							<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="modelWorld">
+							<label class="mdl-textfield__label" for="sample4">Choose a World...</label>
+							<span class="mdl-textfield__error">Input is not a number!</span>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" id="modelFormula">
+							<label class="mdl-textfield__label" for="sample3">Enter a Formula...</label>
+						</div>
+						<div>
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent performButton" onclick="modelChecker()">
+							Check!
+						</button>
+						</div>
+				</nav>
+			</div>
+			<main class="mdl-layout__content">
+				<div class="page-content" id="displayPane">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="drawModel" onclick="displayModel()">Draw Model</button>
+					<img src="" alt="some image" id="imgPane">
+				</div>
+			</main>
+		</div>
+	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="custom.js"></script>
+  </body>
+</html>

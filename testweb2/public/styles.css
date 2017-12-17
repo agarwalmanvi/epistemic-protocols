@@ -1,0 +1,89 @@
+#view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+}
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+.mdl-layout__drawer {
+	width:480px;
+}
+.mdl-layout__drawer.is-visible {
+	left:0;
+}
+@media (max-width:1024px) {
+	.mdl-layout__drawer {
+		left:-230px;
+	}
+}
+#sidePane {
+	margin: 20px 35px 20px 35px
+}
+#drawModel {
+	position: absolute;
+	top:15px;
+	right:15px;
+	z-index:500;
+}
+#imgPane {
+	height:100%;
+	position:absolute;
+	right:15px;
+	top:0;
+}
+.mdl-textfield {
+	width:100%
+}
+.performButton {
+	width:80%;
+	margin: 10px 41px 25px 41px;
+	height:50px
+}
+.modifyButton {
+	width:60%;
+	height:75px;
+	margin:10px 82px 10px 82px;
+}
+.mdl-button--pop {
+	background-color:#FF4081;
+}
+.mdl-dialog {
+	overflow:auto
+}
+.fixedButton {
+	position:absolute;
+	top:15px;
+	left:15px;
+}
+.closeButton {
+	position:absolute;
+	top:15px;
+	left:90px;
+}
+.makeSymButton {
+	position:absolute;
+	top:15px;
+	left:175px;
+}
+.makeTranButton {
+	position:absolute;
+	top:15px;
+	left:357px;
+}
+.mdl-dialog__actions {
+	margin:10px 10px 10px 10px
+}
+.mdl-dialog__content {
+	margin:10px
+}
+.mdl-dialog {
+	width:60vw;
+	max-width:60vw;
+	max-height:80vh
+}
